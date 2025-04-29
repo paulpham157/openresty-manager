@@ -104,8 +104,8 @@ add_repository() {
             fi
             codename=`grep -Po 'VERSION="[0-9]+ \(\K[^)]+' /etc/os-release`
             echo "deb http://openresty.org/package/debian $codename openresty" | sudo tee /etc/apt/sources.list.d/openresty.list
-            ;;
             apt-get update
+            ;;
         centos|rhel|alinux|tlinux|rocky|mariner)
             local v2=$(normalize_version "9")
             if [ "$NEW_OS_VERSION" -ge "$v2" ]; then
@@ -156,6 +156,7 @@ install_openresty() {
             ;;
         sles|opensuse)
             zypper install -y openresty
+            ;;
         alpine)
             apk add openresty
             ;;
