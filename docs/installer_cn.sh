@@ -165,7 +165,7 @@ install_openresty() {
 
 install_openresty_manager() {
     curl https://om.uusec.com/om.tgz -o /tmp/om.tgz
-    tar -zxf /tmp/om.tgz -C /opt/ && /opt/om/oms -s install && systemctl start oms
+    mkdir -p /opt && tar -zxf /tmp/om.tgz -C /opt/ && /opt/om/oms -s install && systemctl start oms
     if [ $? -ne "0" ]; then
         abort "安装OpenResty Manager失败"
     fi
