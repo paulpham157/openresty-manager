@@ -49,7 +49,7 @@ normalize_version() {
         "${segments[3]}"
 }
 
-local NEW_OS_VERSION=$(normalize_version "$OS_VERSION")
+NEW_OS_VERSION=$(normalize_version "$OS_VERSION")
 
 install_dependencies() {
     case $OS_NAME in
