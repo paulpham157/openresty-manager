@@ -77,8 +77,6 @@ Visit http://ip:34567 ,login to the management with the default user name "admin
 
 - ### Docker Installation
 
-> :biohazard: ***If the server is using cloud services, remember to open the TCP port 80, 443 and 34567 required for OpenResty Manager***
-
 One click installation: Automatic installation can be completed in minutes.
 
 ```bash

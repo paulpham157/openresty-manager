@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# OpenResty Manager one click installation script
-# Supported system: CentOS/RHEL 7+, Debian 11+, Ubuntu 18+, Fedora 32+, etc
+# OpenResty Manager 一键安装脚本
+# 支持系统：CentOS/RHEL 7+, Debian 11+, Ubuntu 18+, Fedora 32+, etc
 
 set -e
 
@@ -19,7 +19,7 @@ abort() {
 }
 
 if [[ $EUID -ne 0 ]]; then
-    abort "Error: This script must be run with root privileges"
+    abort "错误：此脚本必须以root权限运行"
 fi
 
 if [ -f /etc/os-release ]; then
@@ -30,7 +30,7 @@ elif type lsb_release >/dev/null 2>&1; then
     OS_NAME=$(lsb_release -si | tr '[:upper:]' '[:lower:]')
     OS_VERSION=$(lsb_release -sr)
 else
-    abort "Unable to detect operating system"
+    abort "无法检测操作系统"
 fi
 
 normalize_version() {
@@ -74,7 +74,7 @@ install_dependencies() {
             apk add wget libmaxminddb curl tar
             ;;
         *)
-            abort "Unsupported Linux distributions"
+            abort "不支持的Linux发行版"
             ;;
     esac
 }
@@ -88,7 +88,7 @@ add_repository() {
                 wget -O - https://openresty.org/package/pubkey.gpg | sudo gpg --dearmor -o /usr/share/keyrings/openresty.gpg
                 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/openresty.gpg] http://openresty.org/package/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list > /dev/null
             elif [ "$NEW_OS_VERSION" -lt "$v3" ]; then
-                abort "The operating system version is too low"
+                abort "操作系统版本过低"
             else
                 wget -O - https://openresty.org/package/pubkey.gpg | sudo apt-key add -
                 echo "deb http://openresty.org/package/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list
@@ -138,7 +138,7 @@ add_repository() {
             apk update
             ;;
         *)
-            abort "Unsupported Linux distributions"
+            abort "不支持的Linux发行版"
             ;;
     esac
 }
@@ -167,32 +167,32 @@ install_openresty_manager() {
     curl https://om.uusec.com/om.tgz -o /tmp/om.tgz
     tar -zxf /tmp/om.tgz -C /opt/ && /opt/om/oms -s install && systemctl start oms
     if [ $? -ne "0" ]; then
-        abort "Installation of OpenResty Manager failed"
+        abort "安装OpenResty Manager失败"
     fi
 }
 
 main() {
-    info "Detected system: ${OS_NAME} ${OS_VERSION}"
+    info "检测到系统：${OS_NAME} ${OS_VERSION}"
     
-    warning "Install dependencies ..."
+    warning "安装依赖..."
     install_dependencies
 
     if [ ! $(command -v openresty) ]; then
-        warning "Add OpenResty repository ..."
+        warning "添加OpenResty仓库..."
         add_repository
         
-        warning "Install OpenResty ..."
+        warning "安装OpenResty..."
         install_openresty
     fi
 
     if [ ! -f "/opt/om/oms" ]; then
-        warning "Install OpenResty Manager ..."
+        warning "安装OpenResty Manager..."
         install_openresty_manager
     else
-        abort "OpenResty Manager has been installed"
+        abort "已安装OpenResty Manager"
     fi
 
-    info "Congratulations on the successful installation"
+    info "恭喜你安装成功"
 }
 
 main

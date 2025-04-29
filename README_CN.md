@@ -39,7 +39,7 @@
 OpenResty Manager是使用最简单、功能强大的开源漂亮的OpenResty管理器，它可以让您轻松地反向代理在家或互联网上运行的网站，包括自动申请并续期免费的SSL证书，而无需对OpenResty或Let's encrypt了解太多。
 
 <h3 align="center">
-  <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager.png" alt="OpenResty Manager" width="700px">
+  <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager_cn.png" alt="OpenResty Manager" width="700px">
   <br>
 </h3>
 
@@ -70,7 +70,7 @@ OpenResty Manager不仅易于使用，而且易于安装，支持主机和容器
 一键安装：自动安装可以在几分钟内完成。
 
 ```bash
-sudo bash -c "$(curl -fsSL https://om.uusec.com/installer.sh)"
+sudo bash -c "$(curl -fsSL https://om.uusec.com/installer_cn.sh)"
 ```
 
 访问 http://ip:34567 ，使用默认用户名 “admin” 和密码 “Passw0rd!” 登录管理。
@@ -79,12 +79,10 @@ sudo bash -c "$(curl -fsSL https://om.uusec.com/installer.sh)"
 
 - ### 容器安装
 
-> :biohazard: ***如果服务器正在使用云服务，请记住开放OpenResty Manager所需的TCP端口80、443和34567***
-
 一键安装：自动安装可以在几分钟内完成。
 
 ```bash
-curl https://om.uusec.com/docker.tgz -o om.tgz && tar -zxf om.tgz && sudo bash ./om/om.sh
+curl https://om.uusec.com/docker_cn.tgz -o om.tgz && tar -zxf om.tgz && sudo bash ./om/om.sh
 ```
 
 随后可以通过 bash /om/om.sh 命令管理OpenResty Manager容器，包括启动、停止、更新、卸载等。
