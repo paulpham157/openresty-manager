@@ -20,6 +20,15 @@ if [[ $EUID -ne 0 ]]; then
     abort "错误：此脚本必须以root权限运行"
 fi
 
+OS_ARCH=$(uname -m)
+case "$OS_ARCH" in
+    x86_64|arm*|aarch64)
+    ;;
+    *)
+    abort "不支持的 CPU 架构: $OS_ARCH"
+    ;;
+esac
+
 if [ -f /etc/os-release ]; then
     source /etc/os-release
     OS_NAME=$ID
@@ -72,7 +81,7 @@ install_dependencies() {
             apk add wget libmaxminddb curl tar
             ;;
         *)
-            abort "不支持的Linux发行版"
+            abort "不支持的Linux发行版: $OS_NAME"
             ;;
     esac
 }
@@ -84,12 +93,20 @@ add_repository() {
             local v3=$(normalize_version "18")
             if [ "$NEW_OS_VERSION" -ge "$v2" ]; then
                 wget -O - https://openresty.org/package/pubkey.gpg | sudo gpg --dearmor -o /usr/share/keyrings/openresty.gpg
-                echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/openresty.gpg] http://openresty.org/package/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list > /dev/null
+                if [ "$OS_ARCH" = "x86_64" ]; then
+                    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/openresty.gpg] http://openresty.org/package/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list > /dev/null
+                else
+                    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/openresty.gpg] http://openresty.org/package/arm64/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list > /dev/null
+                fi
             elif [ "$NEW_OS_VERSION" -lt "$v3" ]; then
                 abort "操作系统版本过低"
             else
                 wget -O - https://openresty.org/package/pubkey.gpg | sudo apt-key add -
-                echo "deb http://openresty.org/package/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list
+                if [ "$OS_ARCH" = "x86_64" ]; then
+                    echo "deb http://openresty.org/package/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list
+                else
+                    echo "deb http://openresty.org/package/arm64/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list
+                fi
             fi
             apt-get update
             ;;
@@ -101,7 +118,11 @@ add_repository() {
                 wget -O - https://openresty.org/package/pubkey.gpg | sudo apt-key add -
             fi
             codename=`grep -Po 'VERSION="[0-9]+ \(\K[^)]+' /etc/os-release`
-            echo "deb http://openresty.org/package/debian $codename openresty" | sudo tee /etc/apt/sources.list.d/openresty.list
+            if [ "$OS_ARCH" = "x86_64" ]; then                
+                echo "deb http://openresty.org/package/debian $codename openresty" | sudo tee /etc/apt/sources.list.d/openresty.list
+            else
+                echo "deb http://openresty.org/package/arm64/debian $codename openresty" | sudo tee /etc/apt/sources.list.d/openresty.list
+            fi
             apt-get update
             ;;
         centos|rhel|alinux|tlinux|rocky|mariner)
@@ -162,15 +183,20 @@ install_openresty() {
 }
 
 install_openresty_manager() {
-    curl https://om.uusec.com/om.tgz -o /tmp/om.tgz
+    if [ "$OS_ARCH" = "x86_64" ]; then                
+        curl https://om.uusec.com/om.tgz -o /tmp/om.tgz
+    else
+        curl https://om.uusec.com/om_arm64.tgz -o /tmp/om.tgz
+    fi
+
     mkdir -p /opt && tar -zxf /tmp/om.tgz -C /opt/ && /opt/om/oms -s install && systemctl start oms
     if [ $? -ne "0" ]; then
-        abort "安装OpenResty Manager失败"
+        abort "OpenResty Manager安装失败"
     fi
 }
 
 main() {
-    info "检测到系统：${OS_NAME} ${OS_VERSION}"
+    info "检测到系统：${OS_NAME} ${OS_VERSION} ${OS_ARCH}"
     
     warning "安装依赖..."
     install_dependencies
