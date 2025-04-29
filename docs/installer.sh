@@ -3,8 +3,6 @@
 # OpenResty Manager one click installation script
 # Supported system: CentOS/RHEL 7+, Debian 11+, Ubuntu 18+, Fedora 32+, etc
 
-set -e
-
 info() {
     echo -e "\033[32m[OpenResty Manager] $*\033[0m"
 }
