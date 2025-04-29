@@ -1,0 +1,113 @@
+<h1 align="center">
+  <br>
+  <img src="https://github.com/Safe3/openresty-manager/blob/main/logo.png" alt="OpenResty Manager" width="70px">
+</h1>
+<h4 align="center">OpenResty Manager</h4>
+
+<p align="center">
+<a href="https://github.com/Safe3/openresty-manager/releases"><img src="https://img.shields.io/github/downloads/Safe3/openresty-manager/total">
+<a href="https://github.com/Safe3/openresty-manager/graphs/contributors"><img src="https://img.shields.io/github/contributors-anon/Safe3/openresty-manager">
+<a href="https://github.com/Safe3/openresty-manager/releases/"><img src="https://img.shields.io/github/release/Safe3/openresty-manager">
+<a href="https://github.com/Safe3/openresty-manager/issues"><img src="https://img.shields.io/github/issues-raw/Safe3/openresty-manager">
+<a href="https://github.com/Safe3/openresty-manager/discussions"><img src="https://img.shields.io/github/discussions/Safe3/openresty-manager">
+</p>
+<p align="center">
+  <a href="#dart-features">Features</a> •
+  <a href="#rocket-usage">Usage</a> •
+  <a href="#gift_heart-credits">Credits</a> •
+  <a href="#kissing_heart-contact">Contact</a> •
+  <a href="#key-license">License</a>
+</p>
+
+
+
+
+
+
+<p align="center">
+  <a href="https://github.com/Safe3/openresty-manager/blob/main/README_CN.md">中文</a>
+  <br/><br/>
+  ⭐Please help us with a star to support our continuous improvement, thank you!
+</p>
+
+
+
+
+---
+
+OpenResty Manager is the easiest using and powerful open source beautiful OpenResty manager, which can enable you to easily reverse proxy your websites running at home or internet, including free SSL, without having to know too much about OpenResty or Let's encrypt.
+
+<h3 align="center">
+  <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager.png" alt="OpenResty Manager" width="700px">
+  <br>
+</h3>
+
+## :dart: Features
+:green_circle: Provide a beautiful, powerful, and easy-to-use web management UI
+
+ :purple_circle: Free SSL support both for HTTP-01 and DNS-01 challenge or provide your own SSL certificates
+
+ :yellow_circle: Easily create reverse proxy for your websites without knowing anything about OpenResty
+
+ :orange_circle: Developed in Go language, single main file, high-performance, supports multi CPU architecture
+
+ :red_circle: Advanced OpenResty configuration available for super users
+
+ :large_blue_circle: Support and inherit all powerful features of OpenResty
+
+
+
+## :rocket: Usage
+
+OpenResty Manager is not only easy to use but also easy to install, supports both host and container environments.
+
+
+- ### Host Installation
+
+> :biohazard: ***If the server is using cloud services, remember to open the TCP port 80, 443 and 34567 required for OpenResty Manager***
+
+One click installation: Automatic installation can be completed in minutes.
+
+```bash
+sudo bash -c "$(curl -fsSL https://om.uusec.com/installer.sh)"
+```
+
+Visit http://ip:34567 ,login to the management with the default user name "admin" and password "Passw0rd!".
+
+
+- ### Docker Installation
+
+> :biohazard: ***If the server is using cloud services, remember to open the TCP port 80, 443 and 34567 required for OpenResty Manager***
+
+One click installation: Automatic installation can be completed in minutes.
+
+```bash
+curl https://om.uusec.com/docker.tgz -o om.tgz && tar -zxf om.tgz && sudo bash ./om/om.sh
+```
+
+Subsequently, `bash ./om/om.sh` is used to manage the OpenResty Manager container, including starting, stopping, updating, uninstalling, etc.
+
+
+
+## :gift_heart: Credits
+
+Thanks to all the amazing [community contributors for sending PRs](https://github.com/Safe3/openresty-manager/graphs/contributors) and keeping this project updated. ❤️
+
+If you have an idea or some kind of improvement, you are welcome to contribute and participate in the Project, feel free to send your PR.
+
+<p align="center">
+<a href="https://github.com/Safe3/openresty-manager/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Safe3/openresty-manager&max=500">
+</a>
+</p>
+
+## :kissing_heart: Contact
+
+If you want to support more features such as Web Application Firewall, please visits [UUSEC WAF](https://uuwaf.uusec.com/).
+
+
+
+## :key: License
+
+OpenResty Manager is under GPL license, everyone can use it for free！
+
