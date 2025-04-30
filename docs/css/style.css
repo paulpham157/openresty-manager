@@ -366,7 +366,7 @@ body {
 }
 
 /* 暗色模式 */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) { */
     :root {
         --text-color: #f3f4f6;
         --bg-color: #111827;
@@ -388,4 +388,4 @@ body {
     .code-block {
         background: #000;
     }
-}
+/*}*/
