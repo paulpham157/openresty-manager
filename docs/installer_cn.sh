@@ -62,11 +62,13 @@ install_dependencies() {
     case $OS_NAME in
         ubuntu)
             apt-get update
-            apt-get -y install --no-install-recommends wget gnupg ca-certificates lsb-release libmaxminddb curl tar
+            apt-get -y install software-properties-common
+            add-apt-repository ppa:maxmind/ppa
+            apt-get -y install --no-install-recommends wget gnupg ca-certificates lsb-release libmaxminddb0 curl tar
             ;;
         debian)
             apt-get update
-            apt-get -y install --no-install-recommends wget gnupg ca-certificates libmaxminddb curl tar
+            apt-get -y install --no-install-recommends wget gnupg ca-certificates libmaxminddb0 curl tar
             ;;
         centos|rocky|oracle|rhel|amazon|alinux|tlinux|mariner)
             yum install -y yum-utils wget libmaxminddb curl tar
