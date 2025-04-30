@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+	<link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">OpenResty Manager - 最简单、功能强大的开源OpenResty管理器</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://www.uusec.com"><img src="images/logo.png" width="36px"/></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features" data-i18n="features">特色功能</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#installation" data-i18n="installation">安装指南</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-i18n="about">关于项目</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <button class="lang-switch" onclick="switchLanguage()">中文</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主横幅 -->
+    <section class="hero text-center">
+        <div class="container">
+            <h1 data-aos="fade-up" data-i18n="hero_title">OpenResty Manager</h1>
+            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100" data-i18n="hero_subtitle">
+                最简单、功能强大的开源OpenResty管理器，让您轻松管理网站和SSL证书
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="#installation" class="btn btn-primary me-3" data-i18n="get_started">快速开始</a>
+                <a href="https://github.com/Safe3/openresty-manager" class="btn btn-outline-light" target="_blank">
+                    <i class="fab fa-github me-2"></i>GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色功能 -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 data-aos="fade-up" data-i18n="features_title">特色功能</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100" data-i18n="features_subtitle">
+                    强大而简单的功能集合，满足您的所有需求
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3 data-i18n="ui_title">美观的UI界面</h3>
+                        <p data-i18n="ui_desc">提供直观、美观且易于使用的Web管理界面，让操作更加简单高效。</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 data-i18n="ssl_title">SSL证书管理</h3>
+                        <p data-i18n="ssl_desc">支持HTTP-01和DNS-01挑战方式，自动申请和续期免费SSL证书。</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <h3 data-i18n="proxy_title">反向代理</h3>
+                        <p data-i18n="proxy_desc">轻松创建和管理反向代理配置，无需深入了解OpenResty细节。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 安装指南 -->
+    <section id="installation" class="installation">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 data-aos="fade-up" data-i18n="installation_title">安装指南</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100" data-i18n="installation_subtitle">
+                    简单几步，快速部署OpenResty Manager
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="installation-card">
+                        <h3 data-i18n="host_install">主机版安装</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" data-clipboard-target="#host-install-cmd" data-i18n="copy">复制</button>
+                            <code id="host-install-cmd">sudo bash -c "$(curl -fsSL https://om.uusec.com/installer_cn.sh)"</code>
+                        </div>
+                        <p data-i18n="access_info">访问地址：http://ip:34567</p>
+                        <p data-i18n="default_username">默认用户名：admin</p>
+                        <p data-i18n="default_password">默认密码：Passw0rd!</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="installation-card">
+                        <h3 data-i18n="docker_install">Docker版安装</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" data-clipboard-target="#docker-install-cmd" data-i18n="copy">复制</button>
+                            <code id="docker-install-cmd">curl https://om.uusec.com/docker_cn.tgz -o om.tgz && tar -zxf om.tgz && sudo bash ./om/om.sh</code>
+                        </div>
+						<p data-i18n="access_info">访问地址：http://ip:34567</p>
+						<p data-i18n="default_username">默认用户名：admin</p>
+						<p data-i18n="default_password">默认密码：Passw0rd!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于项目 -->
+    <section id="about" class="about">
+        <div class="container text-center">
+            <h2 data-aos="fade-up" data-i18n="about_title">关于项目</h2>
+            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100" data-i18n="about_desc">
+                OpenResty Manager是一个开源项目，致力于简化OpenResty的管理和配置过程。采用Go语言开发，具有高性能、跨平台等特点。
+            </p>
+            <div class="github-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://github.com/Safe3/openresty-manager" class="btn btn-dark" target="_blank">
+                    <i class="fab fa-github me-2"></i>Star on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p data-i18n="footer_text">基于GPL协议开源。</p>
+            <div class="social-links">
+                <a href="https://github.com/Safe3/openresty-manager" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
