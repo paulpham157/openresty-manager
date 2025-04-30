@@ -62,7 +62,7 @@ OpenResty Manager is the easiest using, powerful and beautiful OpenResty manager
 OpenResty Manager is not only easy to use but also easy to install, supports both host and container environments.
 
 
-- ### Host Installation
+- ### Host Version
 
 > :biohazard: ***If the server is using cloud services, remember to open the TCP port 80, 443 and 34567 required for OpenResty Manager***
 
@@ -72,10 +72,10 @@ One click installation: Automatic installation can be completed in minutes.
 sudo bash -c "$(curl -fsSL https://om.uusec.com/installer.sh)"
 ```
 
-Visit http://ip:34567 ,login to the management with the default user name "admin" and password "Passw0rd!".
+Visit http://ip:34567 ,login to the management with the default username "admin" and password "Passw0rd!".
 
 
-- ### Docker Installation
+- ### Docker Version
 
 One click installation: Automatic installation can be completed in minutes.
 

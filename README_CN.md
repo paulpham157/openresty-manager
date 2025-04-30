@@ -63,7 +63,7 @@ OpenResty Manager是使用最简单、功能强大的开源漂亮的OpenResty管
 OpenResty Manager不仅易于使用，而且易于安装，支持主机和容器环境。
 
 
-- ### 主机安装
+- ### 主机版
 
 > :biohazard: ***如果服务器正在使用云服务，请记住开放OpenResty Manager所需的TCP端口80、443和34567***
 
@@ -77,7 +77,7 @@ sudo bash -c "$(curl -fsSL https://om.uusec.com/installer_cn.sh)"
 
 
 
-- ### 容器安装
+- ### 容器版
 
 一键安装：自动安装可以在几分钟内完成。
 
