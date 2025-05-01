@@ -36,7 +36,7 @@
 
 ---
 
-OpenResty Manager是使用最简单、功能强大的开源漂亮的OpenResty管理器，它可以让您轻松地反向代理在家或互联网上运行的网站，包括自动申请并续期免费的SSL证书，而无需对OpenResty或Let's Encrypt了解太多。
+OpenResty Manager是使用最简单易用、功能强大、漂亮的OpenResty管理器，OpenResty Edge 的开源替代品，它可以让您轻松地反向代理在家或互联网上运行的网站，包括自动申请并续期免费的SSL证书，而无需对OpenResty或Let's Encrypt了解太多。
 
 <h3 align="center">
   <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager_cn.png" alt="OpenResty Manager" width="700px">
