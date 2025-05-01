@@ -197,6 +197,19 @@ install_openresty_manager() {
     fi
 }
 
+allow_firewall_ports() {
+    if [ ! -f "/opt/om/.fw" ];then
+        echo "" > /opt/om/.fw
+        if [ $(command -v firewall-cmd) ]; then
+            firewall-cmd --permanent --add-port={80,443,34567}/tcp > /dev/null 2>&1
+            firewall-cmd --reload > /dev/null 2>&1
+        elif [ $(command -v ufw) ]; then
+            for port in 80 443 34567; do ufw allow $port/tcp > /dev/null 2>&1; done
+            ufw reload > /dev/null 2>&1
+        fi
+    fi
+}
+
 main() {
     info "检测到系统：${OS_NAME} ${OS_VERSION} ${OS_ARCH}"
     
@@ -217,6 +230,9 @@ main() {
     else
         abort "已安装OpenResty Manager"
     fi
+
+    warning "添加防火墙端口例外..."
+    allow_firewall_ports
 
     info "恭喜你安装成功"
 }
