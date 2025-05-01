@@ -63,7 +63,7 @@ uninstall_om(){
 
 start_om(){
 	if [ ! $(command -v netstat) ]; then
-		$( command -v yum || command -v apt-get ) -y install net-tools
+		$( command -v yum || command -v apt-get || command -v zypper ) -y install net-tools
 	fi
 	port_status=`netstat -nlt|grep -E ':(80|443|34567)\s'|wc -l`
 	if [ $port_status -gt 0 ]; then
