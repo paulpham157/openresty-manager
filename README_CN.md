@@ -89,7 +89,7 @@ curl https://om.uusec.com/docker_cn.tgz -o om.tgz && tar -zxf om.tgz && sudo bas
 
 - ### 快速入门
 
-1. 登录管理：访问http://ip:34567，默认用户名为“admin”，默认密码为“Passw0rd!”。
+1. 登录管理：访问http://ip:34567 ，默认用户名为“admin”，默认密码为“Passw0rd!”。
 2. 添加SSL证书：转到证书管理菜单，申请Let's Encrypt免费SSL证书或上传现有证书。
 3. 添加上游：转到上游管理菜单，为原始站点添加上游负载平衡。
 4. 添加站点：进入站点菜单，点击“新建站点”按钮，按照提示添加反向代理的站点域名。
