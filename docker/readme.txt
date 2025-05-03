@@ -12,5 +12,5 @@ Quick Start:
 2. Add SSL certificates: Go to the certificates management menu, apply for a Let's Encrypt free SSL certificate or upload an existing certificate.
 3. Add upstreams: Go to the upstreams management menu, add a load balancing upstream that for your original sites.
 4. Add a site: Go to the sites menu, click the "New site" button, and follow the prompts to add the site domain names for reverse proxy.
-5. Test connectivity: Change your domain dns A or CNAME record to the OpenResty Manager server IP, Visit your website to see if it can be opened.
+5. Test connectivity: Change your domain dns A or CNAME record to the OpenResty Manager server IP, visit your website to see if it can be opened.
 

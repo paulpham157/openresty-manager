@@ -72,7 +72,6 @@ One click installation: Automatic installation can be completed in minutes.
 sudo bash -c "$(curl -fsSL https://om.uusec.com/installer.sh)"
 ```
 
-Visit http://ip:34567 ,login to the management with the default username "admin" and password "Passw0rd!".
 
 
 - ### Docker Version
@@ -84,6 +83,17 @@ curl https://om.uusec.com/docker.tgz -o om.tgz && tar -zxf om.tgz && sudo bash .
 ```
 
 Subsequently, `bash ./om/om.sh` is used to manage the OpenResty Manager container, including starting, stopping, updating, uninstalling, etc.
+
+
+
+
+- ### Quick Start
+
+1. Login to the management: Access http://ip:34567 , the default username is "admin", and the default password is "Passw0rd!".
+2. Add SSL certificates: Go to the certificates management menu, apply for a Let's Encrypt free SSL certificate or upload an existing certificate.
+3. Add upstreams: Go to the upstreams management menu, add a load balancing upstream that for your original sites.
+4. Add a site: Go to the sites menu, click the "New site" button, and follow the prompts to add the site domain names for reverse proxy.
+5. Test connectivity: Change your domain dns A or CNAME record to the OpenResty Manager server IP, visit your website to see if it can be opened.
 
 
 

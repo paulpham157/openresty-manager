@@ -73,8 +73,6 @@ OpenResty Manager不仅易于使用，而且易于安装，支持主机和容器
 sudo bash -c "$(curl -fsSL https://om.uusec.com/installer_cn.sh)"
 ```
 
-访问 http://ip:34567 ，使用默认用户名 “admin” 和密码 “Passw0rd!” 登录管理。
-
 
 
 - ### 容器版
@@ -86,6 +84,17 @@ curl https://om.uusec.com/docker_cn.tgz -o om.tgz && tar -zxf om.tgz && sudo bas
 ```
 
 随后可以通过 bash /om/om.sh 命令管理OpenResty Manager容器，包括启动、停止、更新、卸载等。
+
+
+
+- ### 快速入门
+
+1. 登录管理：访问http://ip:34567，默认用户名为“admin”，默认密码为“Passw0rd!”。
+2. 添加SSL证书：转到证书管理菜单，申请Let's Encrypt免费SSL证书或上传现有证书。
+3. 添加上游：转到上游管理菜单，为原始站点添加上游负载平衡。
+4. 添加站点：进入站点菜单，点击“新建站点”按钮，按照提示添加反向代理的站点域名。
+5. 测试连接：将您的域名DNS A或CNAME记录更改为OpenResty Manager的服务器IP，访问您的网站查看是否可以打开。
+
 
 
 
