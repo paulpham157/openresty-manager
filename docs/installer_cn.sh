@@ -182,6 +182,8 @@ install_openresty() {
             apk add openresty
             ;;
     esac
+    systemctl stop openresty
+    systemctl disable openresty
 }
 
 install_openresty_manager() {
