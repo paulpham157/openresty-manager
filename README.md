@@ -35,7 +35,7 @@
 
 ---
 
-OpenResty Manager is the easiest using, powerful and beautiful OpenResty manager, open source alternative to OpenResty Edge, which can enable you to easily reverse proxy your websites running at home or internet, including free SSL, without having to know too much about OpenResty or Let's Encrypt.
+OpenResty Manager is the easiest using, powerful and beautiful OpenResty manager, open source alternative to OpenResty Edge, which can enable you to easily reverse proxy your websites with security running at home or internet, including Access Control, HTTP Flood Protection, Free SSL, without having to know too much about OpenResty or Let's Encrypt.
 
 <h3 align="center">
   <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager.png" alt="OpenResty Manager" width="700px">
@@ -49,7 +49,7 @@ OpenResty Manager is the easiest using, powerful and beautiful OpenResty manager
 
  :yellow_circle: Easily create reverse proxy for your websites without knowing anything about OpenResty
 
- :orange_circle: Developed in Go language, single main file, high-performance, supports multi CPU architecture
+ :orange_circle: Provide some powerful security function, such as Access Control, HTTP Flood Protection, etc
 
  :red_circle: Advanced OpenResty configuration available for super users
 
