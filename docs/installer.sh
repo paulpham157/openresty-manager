@@ -88,6 +88,16 @@ install_dependencies() {
     esac
 }
 
+check_ports() {
+    if [ $(command -v ss) ]; then
+        for port in 80 443 34567; do
+            if ss -tln "( sport = :${port} )" | grep -q LISTEN; then
+                abort "Port ${port} is occupied, please close it and try again"
+            fi
+        done
+	fi
+}
+
 add_repository() {
     case $OS_NAME in
         ubuntu)
@@ -216,6 +226,9 @@ main() {
     
     warning "Install dependencies ..."
     install_dependencies
+
+    warning "Check for port conflicts ..."
+    check_ports
 
     if [ ! $(command -v openresty) ]; then
         warning "Add OpenResty repository ..."

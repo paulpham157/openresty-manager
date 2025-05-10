@@ -88,6 +88,16 @@ install_dependencies() {
     esac
 }
 
+check_ports() {
+    if [ $(command -v ss) ]; then
+        for port in 80 443 34567; do
+            if ss -tln "( sport = :${port} )" | grep -q LISTEN; then
+                abort "端口 ${port} 被占用, 请关闭该端口后重新安装"
+            fi
+        done
+	fi
+}
+
 add_repository() {
     case $OS_NAME in
         ubuntu)
@@ -217,6 +227,9 @@ main() {
     
     warning "安装依赖..."
     install_dependencies
+
+    warning "检查端口冲突 ..."
+    check_ports
 
     if [ ! $(command -v openresty) ]; then
         warning "添加OpenResty仓库..."
