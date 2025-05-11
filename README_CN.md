@@ -118,6 +118,11 @@ curl https://om.uusec.com/docker_cn.tgz -o om.tgz && tar -zxf om.tgz && sudo bas
 
 如果您想支持更多功能，如Web应用程序防火墙，请访问[南墙](https://waf.uusec.com/)项目。
 
+- 官方 QQ 群：11500614
+
+- 官方微信群：微信扫描以下二维码加入
+
+  <img src="https://waf.uusec.com/_media/weixin.jpg" alt="微信群"  height="200px" />
 
 
 ## :key: 授权

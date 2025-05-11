@@ -113,7 +113,9 @@ If you have an idea or some kind of improvement, you are welcome to contribute a
 
 If you want to support more features such as Web Application Firewall, please visits [UUSEC WAF](https://uuwaf.uusec.com/).
 
+- WeChat Group:  Scan the following QR code to join
 
+  <img src="https://waf.uusec.com/_media/weixin.jpg" alt="WeChat"  height="200px" />
 
 ## :key: License
 
