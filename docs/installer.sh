@@ -90,7 +90,7 @@ install_dependencies() {
 
 check_ports() {
     if [ $(command -v ss) ]; then
-        for port in 80 443 34567; do
+        for port in 80 443 777 34567; do
             if ss -tln "( sport = :${port} )" | grep -q LISTEN; then
                 abort "Port ${port} is occupied, please close it and try again"
             fi
