@@ -192,6 +192,9 @@ install_openresty() {
             apk add openresty
             ;;
     esac
+    if [ $? -ne "0" ]; then
+        abort "OpenResty安装失败, 请参考 https://openresty.org/cn/linux-packages.html 查看你的系统版本是否受支持"
+    fi
     systemctl stop openresty > /dev/null 2>&1
     systemctl disable openresty > /dev/null 2>&1
 }

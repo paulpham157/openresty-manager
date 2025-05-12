@@ -192,6 +192,9 @@ install_openresty() {
             apk add openresty
             ;;
     esac
+    if [ $? -ne "0" ]; then
+        abort "Installation of OpenResty failed, please refer to https://openresty.org/en/linux-packages.html"
+    fi
     systemctl stop openresty > /dev/null 2>&1
     systemctl disable openresty > /dev/null 2>&1
 }
