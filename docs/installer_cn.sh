@@ -192,8 +192,8 @@ install_openresty() {
             apk add openresty
             ;;
     esac
-    systemctl stop openresty
-    systemctl disable openresty
+    systemctl stop openresty > /dev/null 2>&1
+    systemctl disable openresty > /dev/null 2>&1
 }
 
 install_openresty_manager() {
@@ -203,7 +203,7 @@ install_openresty_manager() {
         curl https://om.uusec.com/om_arm64.tgz -o /tmp/om.tgz
     fi
 
-    mkdir -p /opt && tar -zxf /tmp/om.tgz -C /opt/ && /opt/om/oms -s install && systemctl start oms
+    mkdir -p /opt && tar -zxf /tmp/om.tgz -C /opt/ && /opt/om/oms -s install && /opt/om/oms -s start
     if [ $? -ne "0" ]; then
         abort "OpenResty Manager安装失败"
     fi
