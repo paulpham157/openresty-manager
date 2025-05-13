@@ -125,7 +125,7 @@ start_menu(){
 	;;
 	5)
 	repair_om
-	info "维修已完成"
+	info "修复已完成"
 	;;
 	6)
 	uninstall_om

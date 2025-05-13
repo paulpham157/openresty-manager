@@ -42,7 +42,7 @@ const translations = {
         hero_subtitle: '最简单、功能强大的开源OpenResty管理器，让您轻松管理网站和SSL证书',
         access_info: '访问地址：http://ip:34567',
         default_username: '默认用户名：admin',
-        default_password: '默认密码：Passw0rd!'
+        default_password: '默认密码：#Passw0rd'
     },
     en: {
 		title: 'OpenResty Manager - The easiest using, powerful and beautiful OpenResty manager',
@@ -70,7 +70,7 @@ const translations = {
         hero_subtitle: 'The simplest and most powerful open-source OpenResty manager for effortless website and SSL certificate management',
         access_info: 'Access URL: http://ip:34567',
         default_username: 'Default Username: admin',
-        default_password: 'Default Password: Passw0rd!'
+        default_password: 'Default Password: #Passw0rd'
     }
 };
 

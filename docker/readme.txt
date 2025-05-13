@@ -8,7 +8,7 @@ OpenResty Manager docker management: Execute the following command and start the
 bash om.sh
 
 Quick Start:
-1. Login to the management: Access http://ip:34567 , the default username is "admin", and the default password is "Passw0rd!".
+1. Login to the management: Access http://ip:34567 , the default username is "admin", and the default password is "#Passw0rd".
 2. Add SSL certificates: Go to the certificates management menu, apply for a Let's Encrypt free SSL certificate or upload an existing certificate.
 3. Add upstreams: Go to the upstreams management menu, add a load balancing upstream that for your original sites.
 4. Add a site: Go to the sites menu, click the "New site" button, and follow the prompts to add the site domain names for reverse proxy.
