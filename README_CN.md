@@ -83,7 +83,7 @@ sudo bash -c "$(curl -fsSL https://om.uusec.com/installer_cn.sh)"
 curl https://om.uusec.com/docker_cn.tgz -o om.tgz && tar -zxf om.tgz && sudo bash ./om/om.sh
 ```
 
-随后可以通过 bash /om/om.sh 命令管理OpenResty Manager容器，包括启动、停止、更新、卸载等。
+随后可以通过 bash ./om/om.sh 命令管理OpenResty Manager容器，包括启动、停止、更新、卸载等。
 
 
 
