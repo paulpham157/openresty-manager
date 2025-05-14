@@ -17,7 +17,7 @@ abort() {
 }
 
 if [[ $EUID -ne 0 ]]; then
-    abort "Error: This script must be run with root privileges"
+    abort "This script must be run with root privileges"
 fi
 
 OS_ARCH=$(uname -m)
@@ -241,7 +241,7 @@ main() {
         install_openresty
     fi
 
-    if [ ! -f "/opt/om/oms" ]; then
+    if [ ! -e "/opt/om" ]; then
         warning "Install OpenResty Manager ..."
         install_openresty_manager
     else

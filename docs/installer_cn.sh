@@ -17,7 +17,7 @@ abort() {
 }
 
 if [[ $EUID -ne 0 ]]; then
-    abort "错误：此脚本必须以root权限运行"
+    abort "此脚本必须以root权限运行"
 fi
 
 OS_ARCH=$(uname -m)
@@ -242,7 +242,7 @@ main() {
         install_openresty
     fi
 
-    if [ ! -f "/opt/om/oms" ]; then
+    if [ ! -e "/opt/om" ]; then
         warning "安装OpenResty Manager..."
         install_openresty_manager
     else

@@ -79,10 +79,10 @@ sudo bash -c "$(curl -fsSL https://om.uusec.com/installer.sh)"
 One click installation: Automatic installation can be completed in minutes.
 
 ```bash
-curl https://om.uusec.com/docker.tgz -o om.tgz && tar -zxf om.tgz && sudo bash ./om/om.sh
+sudo bash -c "$(curl -fsSL https://om.uusec.com/docker_installer.sh)"
 ```
 
-Subsequently, `bash ./om/om.sh` is used to manage the OpenResty Manager container, including starting, stopping, updating, uninstalling, etc.
+Subsequently, `bash /opt/om/om.sh` is used to manage the OpenResty Manager container, including starting, stopping, updating, uninstalling, etc.
 
 
 

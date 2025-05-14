@@ -206,7 +206,7 @@
                     </h4>
                     <div class="bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto">
                         <code class="text-sm">
-                            curl https://om.uusec.com/docker.tgz -o om.tgz && tar -zxf om.tgz && sudo bash ./om/om.sh
+                            sudo bash -c "$(curl -fsSL https://om.uusec.com/docker_installer.sh)"
                         </code>
                     </div>
                 </div>
