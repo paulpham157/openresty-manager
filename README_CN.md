@@ -80,7 +80,7 @@ sudo bash -c "$(curl -fsSL https://om.uusec.com/installer_cn.sh)"
 一键安装：自动安装可以在几分钟内完成。
 
 ```bash
-sudo bash -c "$(curl -fsSL https://om.uusec.com/docker_installer.sh)"
+sudo bash -c "$(curl -fsSL https://om.uusec.com/docker_installer_cn.sh)"
 ```
 
 随后可以通过 bash /opt/om/om.sh 命令管理OpenResty Manager容器，包括启动、停止、更新、卸载等。
