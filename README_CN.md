@@ -98,6 +98,17 @@ sudo bash -c "$(curl -fsSL https://om.uusec.com/docker_installer_cn.sh)"
 
 
 
+- ### 卸载
+
+一键卸载：自动卸载可以在几分钟内完成。
+
+```bash
+sudo bash -c "$(curl -fsSL https://om.uusec.com/uninstaller.sh)"
+```
+
+
+
+
 ## :gift_heart: 感谢
 
 感谢所有出色的[社区贡献者发送PR](https://github.com/Safe3/openresty-manager/graphs/contributors)并保持此项目的更新。❤️

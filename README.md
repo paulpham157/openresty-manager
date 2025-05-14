@@ -97,6 +97,18 @@ Subsequently, `bash /opt/om/om.sh` is used to manage the OpenResty Manager conta
 
 
 
+
+- ### Uninstall
+
+One click uninstallation: Automatic uninstallation can be completed in minutes.
+
+```bash
+sudo bash -c "$(curl -fsSL https://om.uusec.com/uninstaller.sh)"
+```
+
+
+
+
 ## :gift_heart: Credits
 
 Thanks to all the amazing [community contributors for sending PRs](https://github.com/Safe3/openresty-manager/graphs/contributors) and keeping this project updated. ❤️
