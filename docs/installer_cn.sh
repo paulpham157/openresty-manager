@@ -246,7 +246,7 @@ main() {
         warning "安装OpenResty Manager..."
         install_openresty_manager
     else
-        abort "已安装OpenResty Manager"
+        abort '目录 "/opt/om" 已存在, 请确认删除后再试'
     fi
 
     warning "添加防火墙端口例外..."

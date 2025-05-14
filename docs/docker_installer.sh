@@ -81,7 +81,7 @@ main() {
         warning "Install OpenResty Manager ..."
         install_openresty_manager
     else
-        abort "OpenResty Manager has been installed"
+        abort 'The directory "/opt/om" already exists, please confirm to remove it and try again'
     fi
 
     warning "Add firewall ports exception ..."
