@@ -90,8 +90,6 @@ main() {
     warning "Add firewall ports exception ..."
     allow_firewall_ports
 
-    info "Congratulations on the successful installation"
-
     bash /opt/om/om.sh
 }
 

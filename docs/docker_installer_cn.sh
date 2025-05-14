@@ -90,8 +90,6 @@ main() {
     warning "添加防火墙端口例外..."
     allow_firewall_ports
 
-    info "恭喜你安装成功"
-
     bash /opt/om/om.sh
 }
 
