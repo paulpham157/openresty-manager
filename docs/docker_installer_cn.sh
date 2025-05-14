@@ -72,10 +72,7 @@ allow_firewall_ports() {
 }
 
 main() {
-    info "Detected system: ${OS_NAME} ${OS_VERSION} ${OS_ARCH}"
-    
     info "检测到系统：${OS_NAME} ${OS_VERSION} ${OS_ARCH}"
-    install_dependencies
 
     warning "检查端口冲突 ..."
     check_ports

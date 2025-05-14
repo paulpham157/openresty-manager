@@ -73,9 +73,6 @@ allow_firewall_ports() {
 
 main() {
     info "Detected system: ${OS_NAME} ${OS_VERSION} ${OS_ARCH}"
-    
-    warning "Install dependencies ..."
-    install_dependencies
 
     warning "Check for port conflicts ..."
     check_ports
