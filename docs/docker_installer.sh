@@ -22,7 +22,7 @@ fi
 
 OS_ARCH=$(uname -m)
 case "$OS_ARCH" in
-    x86_64)
+    x86_64|arm*|aarch64)
     ;;
     *)
     abort "Unsupported CPU arch: $OS_ARCH"
