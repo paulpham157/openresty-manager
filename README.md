@@ -42,6 +42,7 @@ The easiest using, powerful and beautiful OpenResty Manager (Nginx Enhanced Vers
   <br>
 </h3>
 
+
 ## :dart: Features
 :green_circle: Provide a beautiful, powerful, and easy-to-use web management UI
 
@@ -61,6 +62,11 @@ The easiest using, powerful and beautiful OpenResty Manager (Nginx Enhanced Vers
 
 OpenResty Manager is not only easy to use but also easy to install, supports both host and container environments.
 
+- ### Supported Cloud
+
+&nbsp;&nbsp;<a href="https://app.rainyun.com/apps/rca/store/6202?ref=uusec"><img height="42" src="https://rainyun-apps.cn-nb1.rains3.com/materials/deploy-on-rainyun-en.svg" alt="RainYun"></a>
+
+&nbsp;&nbsp;<a href="https://8465.cn/aff/NCKQREHC"><img height="36" src="https://8465.cn/themes/web/www/upload/local665305c838bfb.png" alt="蓝谷科技"></a>
 
 - ### Host Version
 
@@ -72,8 +78,6 @@ One click installation: Automatic installation can be completed in minutes.
 sudo bash -c "$(curl -fsSL https://om.uusec.com/installer.sh)"
 ```
 
-
-
 - ### Docker Version
 
 One click installation: Automatic installation can be completed in minutes.
@@ -84,9 +88,6 @@ sudo bash -c "$(curl -fsSL https://om.uusec.com/docker_installer.sh)"
 
 Subsequently, `bash /opt/om/om.sh` is used to manage the OpenResty Manager container, including starting, stopping, updating, uninstalling, etc.
 
-
-
-
 - ### Quick Start
 
 1. Login to the management: Access http://ip:34567 , the default username is "admin", and the default password is "#Passw0rd".
@@ -95,9 +96,6 @@ Subsequently, `bash /opt/om/om.sh` is used to manage the OpenResty Manager conta
 4. Add a site: Go to the sites menu, click the "New site" button, and follow the prompts to add the site domain names for reverse proxy.
 5. Test connectivity: Change your domain dns A or CNAME record to the OpenResty Manager server IP, visit your website to see if it can be opened.
 
-
-
-
 - ### Uninstall
 
 One click uninstallation: Automatic uninstallation can be completed in minutes.
@@ -105,9 +103,6 @@ One click uninstallation: Automatic uninstallation can be completed in minutes.
 ```bash
 sudo bash -c "$(curl -fsSL https://om.uusec.com/uninstaller.sh)"
 ```
-
-
-
 
 ## :gift_heart: Credits
 

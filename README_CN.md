@@ -19,20 +19,11 @@
   <a href="#key-授权">授权</a>
 </p>
 
-
-
-
-
-
 <p align="center">
   <a href="https://github.com/Safe3/openresty-manager/blob/main/README.md">English</a>
   <br/><br/>
   ⭐请帮我们点个star以支持我们不断改进，谢谢！
 </p>
-
-
-
-
 
 ---
 
@@ -62,6 +53,11 @@
 
 OpenResty Manager不仅易于使用，而且易于安装，支持主机和容器环境。
 
+- ### Supported Cloud
+
+&nbsp;&nbsp;<a href="https://app.rainyun.com/apps/rca/store/6202?ref=uusec"><img height="42" src="https://rainyun-apps.cn-nb1.rains3.com/materials/deploy-on-rainyun-cn.svg" alt="雨云"></a>
+
+&nbsp;&nbsp;<a href="https://8465.cn/aff/NCKQREHC"><img height="36" src="https://8465.cn/themes/web/www/upload/local665305c838bfb.png" alt="蓝谷科技"></a>
 
 - ### 主机版
 
