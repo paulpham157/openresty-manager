@@ -62,7 +62,7 @@ The easiest using, powerful and beautiful OpenResty Manager (Nginx Enhanced Vers
 
 OpenResty Manager is not only easy to use but also easy to install, supports both host and container environments.
 
-- ### Supported Cloud
+- ### Cloud Deploy
 
 &nbsp;&nbsp;<a href="https://app.rainyun.com/apps/rca/store/6202?ref=uusec"><img height="42" src="https://rainyun-apps.cn-nb1.rains3.com/materials/deploy-on-rainyun-en.svg" alt="RainYun"></a>
 

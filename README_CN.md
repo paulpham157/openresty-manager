@@ -53,7 +53,7 @@
 
 OpenResty Manager不仅易于使用，而且易于安装，支持主机和容器环境。
 
-- ### Supported Cloud
+- ### 云服务部署
 
 &nbsp;&nbsp;<a href="https://app.rainyun.com/apps/rca/store/6202?ref=uusec"><img height="42" src="https://rainyun-apps.cn-nb1.rains3.com/materials/deploy-on-rainyun-cn.svg" alt="雨云"></a>
 
