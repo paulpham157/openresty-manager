@@ -64,9 +64,9 @@ OpenResty Manager is not only easy to use but also easy to install, supports bot
 
 - ### Cloud Deploy
 
-&nbsp;&nbsp;<a href="https://app.rainyun.com/apps/rca/store/6202?ref=uusec"><img height="42" src="https://rainyun-apps.cn-nb1.rains3.com/materials/deploy-on-rainyun-en.svg" alt="RainYun"></a>
+&nbsp;&nbsp;<a href="https://app.rainyun.com/apps/rca/store/6202?ref=uusec" target="_blank"><img height="42" src="https://rainyun-apps.cn-nb1.rains3.com/materials/deploy-on-rainyun-en.svg" alt="RainYun"></a>
 
-&nbsp;&nbsp;<a href="https://8465.cn/aff/NCKQREHC"><img height="36" src="https://8465.cn/themes/web/www/upload/local665305c838bfb.png" alt="蓝谷科技"></a>
+&nbsp;&nbsp;<a href="https://8465.cn/aff/NCKQREHC" target="_blank"><img height="32" src="https://8465.cn/themes/web/www/upload/local665305c838bfb.png" alt="蓝谷科技"></a>
 
 - ### Host Version
 
