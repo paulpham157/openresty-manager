@@ -201,9 +201,9 @@ install_openresty() {
 
 install_openresty_manager() {
     if [ "$OS_ARCH" = "x86_64" ]; then                
-        curl https://om.uusec.com/om.tgz -o /tmp/om.tgz
+        curl https://download.uusec.com/om.tgz -o /tmp/om.tgz
     else
-        curl https://om.uusec.com/om_arm64.tgz -o /tmp/om.tgz
+        curl https://download.uusec.com/om_arm64.tgz -o /tmp/om.tgz
     fi
 
     mkdir -p /opt && tar -zxf /tmp/om.tgz -C /opt/ && /opt/om/oms -s install && /opt/om/oms -s start
