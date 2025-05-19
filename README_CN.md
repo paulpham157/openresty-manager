@@ -59,6 +59,8 @@ OpenResty Manager不仅易于使用，而且易于安装，支持主机和容器
 
 &nbsp;&nbsp;<a href="https://8465.cn/aff/NCKQREHC" target="_blank"><img height="32" src="https://8465.cn/themes/web/www/upload/local665305c838bfb.png" alt="蓝谷科技"></a>
 
+&nbsp;&nbsp;<a href="https://www.dkdun.cn/aff/RXBQPEUU" target="_blank"><img height="32" src="https://www.dkdun.cn/themes/web/www/upload/local673d5fc9c789c.png" alt="林枫云"></a>
+
 - ### 主机版
 
 > :biohazard: ***如果服务器正在使用云服务，请记住开放OpenResty Manager所需的TCP端口80、443和34567***
