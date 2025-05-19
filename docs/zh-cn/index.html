@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenResty Manager - 免费开源、简单易用、功能强大的OpenResty管理器</title>
+    <script src="/tailwindcss.js"></script>
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .screenshot {
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-6 py-12">
+            <nav class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="logo.png" width="48px">
+                    <span class="text-2xl font-bold">OpenResty Manager</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="nav-link">功能特色</a>
+                    <a href="#screenshots" class="nav-link">界面截图</a>
+                    <a href="#installation" class="nav-link">软件安装</a>
+                    <a href="#support" class="nav-link">技术支持</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="mt-20 md:mt-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">OpenResty Edge的开源替代品</h1>
+                <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 opacity-90">
+                    基于OpenResty并提供的强大web的管理界面，具有服务器状态监控、安全防护、免费SSL证书等功能。
+                </p>
+                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="https://github.com/Safe3/openresty-manager" 
+                       class="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
+                        <i class="fab fa-github mr-2"></i> GitHub查看
+                    </a>
+                    <a href="#installation" 
+                       class="bg-transparent border-2 border-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
+                        <i class="fas fa-download mr-2"></i> 快速开始
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">功能特色</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    OpenResty Manager提供了轻松管理OpenResty服务器所需的一切。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-gray-50 p-8 rounded-xl transition duration-300 hover:shadow-xl">
+                    <div class="text-purple-600 mb-6">
+                        <i class="fas fa-globe text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">反向代理</h3>
+                    <p class="text-gray-600">
+                        通过用户友好的界面轻松配置和管理您网站的反向代理设置。
+                    </p>
+                </div>
+
+                <div class="feature-card bg-gray-50 p-8 rounded-xl transition duration-300 hover:shadow-xl">
+                    <div class="text-purple-600 mb-6">
+                        <i class="fas fa-chart-line text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">服务状态</h3>
+                    <p class="text-gray-600">
+                        通过详细的指标和可视化实时监控服务器的性能。
+                    </p>
+                </div>
+
+                <div class="feature-card bg-gray-50 p-8 rounded-xl transition duration-300 hover:shadow-xl">
+                    <div class="text-purple-600 mb-6">
+                        <i class="fas fa-certificate text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">免费证书</h3>
+                    <p class="text-gray-600">
+                        通过Let's Encrypt集成自动管理SSL证书以实现安全连接。
+                    </p>
+                </div>
+
+                <div class="feature-card bg-gray-50 p-8 rounded-xl transition duration-300 hover:shadow-xl">
+                    <div class="text-purple-600 mb-6">
+                        <i class="fas fa-lock text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">访问控制</h3>
+                    <p class="text-gray-600">
+                        使用强大的访问控制功能保护您的应用程序，以保护您的资源。
+                    </p>
+                </div>
+
+                <div class="feature-card bg-gray-50 p-8 rounded-xl transition duration-300 hover:shadow-xl">
+                    <div class="text-purple-600 mb-6">
+                        <i class="fas fa-shield-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">CC 防护</h3>
+                    <p class="text-gray-600">
+                        使用内置的HTTP洪水防护机制保护您的网站免受DDoS攻击。
+                    </p>
+                </div>
+
+                <div class="feature-card bg-gray-50 p-8 rounded-xl transition duration-300 hover:shadow-xl">
+                    <div class="text-purple-600 mb-6">
+                        <i class="fas fa-history text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">使用简单</h3>
+                    <p class="text-gray-600">
+                        用户友好的界面，不需要对OpenResty或Let's Encrypt有深入的了解。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">界面截图</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    看看OpenResty Manager直观而强大的界面。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex justify-center">
+                    <img src="om.png" 
+                         alt="仪表板屏幕截图" class="screenshot w-full max-w-2xl">
+                </div>
+                <div class="flex justify-center">
+                    <img src="cfg.png" 
+                         alt="配置屏幕截图" class="screenshot w-full max-w-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">快速开始</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    简单的安装过程，使OpenResty Manager启动并运行。
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl p-8">
+                <h3 class="text-2xl font-bold mb-6 text-gray-800">二选一安装</h3>
+                
+                <div class="mb-8">
+                    <h4 class="text-lg font-semibold mb-3 text-gray-700 flex items-center">
+                        <span class="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3">1</span>
+                        主机版
+                    </h4>
+                    <div class="bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto">
+                        <code class="text-sm">
+                            sudo bash -c "$(curl -fsSL https://om.uusec.com/installer.sh)"
+                        </code>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h4 class="text-lg font-semibold mb-3 text-gray-700 flex items-center">
+                        <span class="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3">2</span>
+                        容器版
+                    </h4>
+                    <div class="bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto">
+                        <code class="text-sm">
+                            sudo bash -c "$(curl -fsSL https://om.uusec.com/docker_installer.sh)"
+                        </code>
+                    </div>
+                </div>
+                <div class="mt-10 text-center">
+                    <a href="https://github.com/Safe3/openresty-manager/blob/main/README.md" 
+                       class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300">
+                        <i class="fas fa-book mr-2"></i> 查看完整文档
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">需要帮助?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    我们在这里帮助您充分利用OpenResty Manager。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-xl text-center">
+                    <div class="text-purple-600 mb-6">
+                        <i class="fas fa-bug text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">报告问题</h3>
+                    <p class="text-gray-600 mb-4">
+                        发现错误或有功能请求？在GitHub上打开一个问题。
+                    </p>
+                    <a href="https://github.com/Safe3/openresty-manager/issues" 
+                       class="text-purple-600 font-semibold hover:underline">
+                        转到问题 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl text-center">
+                    <div class="text-purple-600 mb-6">
+                        <i class="fas fa-comments text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">社区讨论</h3>
+                    <p class="text-gray-600 mb-4">
+                        加入与其他OpenResty Manager用户和开发人员的讨论。
+                    </p>
+                    <a href="https://github.com/Safe3/openresty-manager/discussions" 
+                       class="text-purple-600 font-semibold hover:underline">
+                        参与讨论 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl text-center">
+                    <div class="text-purple-600 mb-6">
+                        <i class="fas fa-envelope text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">联系我们</h3>
+                    <p class="text-gray-600 mb-4">
+                        需要直接支持吗？联系维护人员。
+                    </p>
+                    <a href="mailto:support@uusec.com" 
+                       class="text-purple-600 font-semibold hover:underline">
+                        给我们发电子邮件 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-server text-2xl text-purple-400"></i>
+                        <span class="text-xl font-bold">OpenResty Manager</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">OpenResty的Web用户界面</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://github.com/Safe3/openresty-manager" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-discord text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2025 UUSEC. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">License</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle would go here
+        // This is a placeholder for actual implementation
+        document.querySelector('.md\\:hidden button').addEventListener('click', function() {
+            alert('Mobile menu would open here in a full implementation');
+        });
+    </script>
+</body>
+</html>
