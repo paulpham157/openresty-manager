@@ -7,6 +7,8 @@
      #nofile:
        #soft: 102400
        #hard: 102400
+   #environment:
+     #- NGINX_RESOLVER=resolver 127.0.0.11 valid=30s ipv6=off local=on;
    container_name: openresty-manager
    restart: always
    network_mode: host
