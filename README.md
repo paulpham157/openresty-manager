@@ -35,7 +35,7 @@
 
 ---
 
-The easiest using, powerful and beautiful OpenResty Manager (Nginx Enhanced Version) , open source alternative to OpenResty Edge, which can enable you to easily reverse proxy your websites with security running at home or internet, including Access Control, HTTP Flood Protection, Free SSL Certificates, without having to know too much about OpenResty or Let's Encrypt.
+The easiest using, powerful and beautiful OpenResty Manager (Nginx Enhanced Version) , open source alternative to OpenResty Edge, which can enable you to easily reverse proxy your websites with security running at home or internet, including Access Control, HTTP Flood Protection, Free SSL Certificates, Host Manager, without having to know too much about OpenResty or Let's Encrypt.
 
 <h3 align="center">
   <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager.png" alt="OpenResty Manager" width="700px">
@@ -52,7 +52,7 @@ The easiest using, powerful and beautiful OpenResty Manager (Nginx Enhanced Vers
 
  :orange_circle: Provide some powerful security function, such as Access Control, HTTP Flood Protection, etc
 
- :red_circle: Advanced OpenResty configuration available for super users
+ :red_circle: Simplify host management, include UI frendly terminal and file manager for users
 
  :large_blue_circle: Support and inherit all powerful features of OpenResty
 

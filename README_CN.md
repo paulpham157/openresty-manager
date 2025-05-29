@@ -27,7 +27,7 @@
 
 ---
 
-最简单易用、功能强大、漂亮的OpenResty管理器(Nginx增强版)，OpenResty Edge 的开源替代品，它可以让您轻松地安全反向代理在家或互联网上运行的网站，包括访问控制、拒绝服务攻击防护、自动申请并续期免费的SSL证书，而无需对OpenResty或Let's Encrypt了解太多。
+最简单易用、功能强大、漂亮的OpenResty管理器(Nginx增强版)，OpenResty Edge 的开源替代品，它可以让您轻松地安全反向代理在家或互联网上运行的网站，包括访问控制、拒绝服务攻击防护、自动申请并续期免费的SSL证书、主机管理，而无需对OpenResty或Let's Encrypt了解太多。
 
 <h3 align="center">
   <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager_cn.png" alt="OpenResty Manager" width="700px">
@@ -43,7 +43,7 @@
 
  :orange_circle: 提供了多种强大安全功能，如访问控制、拒绝服务攻击防护等
 
- :red_circle: 高级OpenResty配置可供超级用户使用
+ :red_circle: 简化服务器管理，为用户界面友好的终端和文件管理功能
 
  :large_blue_circle: 支持并继承OpenResty超越Nginx的所有强大功能
 
