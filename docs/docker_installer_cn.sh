@@ -22,7 +22,7 @@ fi
 
 OS_ARCH=$(uname -m)
 case "$OS_ARCH" in
-    x86_64)
+    x86_64|arm*|aarch64)
     ;;
     *)
     abort "不支持的 CPU 架构: $OS_ARCH"
