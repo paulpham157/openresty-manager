@@ -53,8 +53,8 @@ main() {
         cd  "$SCRIPT_PATH"
         docker compose down > /dev/null 2>&1
         docker rm -f openresty-manager > /dev/null 2>&1
-	    docker images|grep openresty-manager|awk '{print $3}'|xargs docker rmi -f > /dev/null 2>&1
-	    docker volume ls|grep _om_|awk '{print $2}'|xargs docker volume rm -f > /dev/null 2>&1
+        docker images|grep openresty-manager|awk '{print $3}'|xargs docker rmi -f > /dev/null 2>&1
+        docker volume ls|grep _om_|awk '{print $2}'|xargs docker volume rm -f > /dev/null 2>&1
         rm -rf /opt/om
     else
         abort 'Not found OpenResty Manager in directory "/opt/om"'
