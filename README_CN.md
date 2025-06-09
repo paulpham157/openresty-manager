@@ -33,15 +33,20 @@
   <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager_cn.png" alt="Dashboard" width="700px">
   <br>
 </h3>
+
 <h3 align="center">
-  <img src="https://github.com/Safe3/openresty-manager/blob/main/docs/appstore.png" alt="Appstore" width="700px">
+  <img src="https://github.com/Safe3/openresty-manager/blob/main/appstore_cn.png" alt="Appstore" width="700px">
   <br>
 </h3>
 
 
 
+
 ## :dart: 特色
-:green_circle: 提供了美观、强大且易于使用的web管理UI
+<h3 align="center">
+  <img src="https://github.com/Safe3/openresty-manager/blob/main/appstore.png" alt="Appstore" width="700px">
+  <br>
+</h3>
 
 :purple_circle: 支持通过HTTP-01和DNS-01挑战申请免费SSL证书并自动续期
 

@@ -43,7 +43,7 @@ The most simple, powerful and beautiful host management panel, an open source al
 </h3>
 
 <h3 align="center">
-  <img src="https://github.com/Safe3/openresty-manager/blob/main/docs/appstore.png" alt="Appstore" width="700px">
+  <img src="https://github.com/Safe3/openresty-manager/blob/main/appstore.png" alt="Appstore" width="700px">
   <br>
 </h3>
 
