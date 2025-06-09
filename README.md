@@ -35,7 +35,7 @@
 
 ---
 
-The easiest using, powerful and beautiful OpenResty Manager (Nginx Enhanced Version) , open source alternative to OpenResty Edge, which can enable you to easily reverse proxy your websites with security running at home or internet, including Access Control, HTTP Flood Protection, Free SSL Certificates, Host Manager, without having to know too much about OpenResty or Let's Encrypt.
+The most simple, powerful and beautiful host management panel, an open source alternative to OpenResty Edge, allows you to easily secure reverse proxy websites running at home or on the Internet, including access control, denial of service attack protection, automatic application and renewal of free SSL certificates, without having to know too much about OpenResty or Let's Encrypt. And it supports host management, including easy-to-use web terminals and file management, as well as Docker Composer based application store, greatly reducing the difficulty of website building and container management.
 
 <h3 align="center">
   <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager.png" alt="OpenResty Manager" width="700px">
@@ -54,7 +54,7 @@ The easiest using, powerful and beautiful OpenResty Manager (Nginx Enhanced Vers
 
  :red_circle: Simplify host management, include UI frendly terminal and file manager for users
 
- :large_blue_circle: Support and inherit all powerful features of OpenResty
+ :large_blue_circle: Support application store, greatly reducing the difficulty of website building and container management
 
 
 
@@ -94,9 +94,10 @@ Subsequently, `bash /opt/om/om.sh` is used to manage the OpenResty Manager conta
 
 1. Login to the management: Access http://ip:34567 , the default username is "admin", and the default password is "#Passw0rd".
 2. Add SSL certificates: Go to the certificates management menu, apply for a Let's Encrypt free SSL certificate or upload an existing certificate.
-3. Add upstreams: Go to the upstreams management menu, add a load balancing upstream that for your original sites.
-4. Add a site: Go to the sites menu, click the "New site" button, and follow the prompts to add the site domain names for reverse proxy.
-5. Test connectivity: Change your domain dns A or CNAME record to the OpenResty Manager server IP, visit your website to see if it can be opened.
+3. Add apps: Go to the app store menu and install apps such as WordPress with just one click.
+4. Add upstreams: Go to the upstream management menu and add upstream load balancing for installed applications such as WordPress.
+5. Add a site: Go to the sites menu, click the "New site" button, and follow the prompts to add the site domain names for reverse proxy.
+6. Test connectivity: Change your domain dns A or CNAME record to the OpenResty Manager server IP, visit your website to see if it can be opened.
 
 - ### Uninstall
 

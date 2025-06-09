@@ -27,7 +27,7 @@
 
 ---
 
-最简单易用、功能强大、漂亮的OpenResty管理器(Nginx增强版)，OpenResty Edge 的开源替代品，它可以让您轻松地安全反向代理在家或互联网上运行的网站，包括访问控制、拒绝服务攻击防护、自动申请并续期免费的SSL证书、主机管理，而无需对OpenResty或Let's Encrypt了解太多。
+最简单易用、功能强大、漂亮的主机管理面板，OpenResty Edge 的开源替代品，它可以让您轻松地安全反向代理在家或互联网上运行的网站，包括访问控制、拒绝服务攻击防护、自动申请并续期免费的SSL证书，而无需对OpenResty或Let's Encrypt了解太多。并支持主机管理功能，包括易于使用的Web终端和文件管理以及基于docker compose的应用商店功能，大大降低建站和容器管理的难度。
 
 <h3 align="center">
   <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager_cn.png" alt="OpenResty Manager" width="700px">
@@ -45,7 +45,7 @@
 
  :red_circle: 简化服务器管理，为用户界面友好的终端和文件管理功能
 
- :large_blue_circle: 支持并继承OpenResty超越Nginx的所有强大功能
+ :large_blue_circle: 支持基于docker compose的应用商店功能，大大降低建站和容器管理的难度
 
 
 
@@ -89,9 +89,10 @@ sudo bash -c "$(curl -fsSL https://om.uusec.com/docker_installer_cn.sh)"
 
 1. 登录管理：访问http://ip:34567 ，默认用户名为“admin”，默认密码为“#Passw0rd”。
 2. 添加SSL证书：转到证书管理菜单，申请Let's Encrypt免费SSL证书或上传现有证书。
-3. 添加上游：转到上游管理菜单，为原始站点添加上游负载均衡。
-4. 添加站点：进入站点菜单，点击“新建站点”按钮，按照提示添加反向代理的站点域名。
-5. 测试连接：将您的域名DNS A或CNAME记录更改为OpenResty Manager的服务器IP，访问您的网站查看是否可以打开。
+3. 添加应用：转到应用商店菜单，一键安装应用，如WordPress等。
+4. 添加上游：转到上游管理菜单，为安装的应用如WordPress站点添加上游负载均衡。
+5. 添加站点：进入站点菜单，点击“新建站点”按钮，按照提示添加反向代理的站点域名。
+6. 测试连接：将您的域名DNS A或CNAME记录更改为OpenResty Manager的服务器IP，访问您的网站查看是否可以打开。
 
 
 

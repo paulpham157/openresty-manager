@@ -10,7 +10,7 @@ bash om.sh
 Quick Start:
 1. Login to the management: Access http://ip:34567 , the default username is "admin", and the default password is "#Passw0rd".
 2. Add SSL certificates: Go to the certificates management menu, apply for a Let's Encrypt free SSL certificate or upload an existing certificate.
-3. Add upstreams: Go to the upstreams management menu, add a load balancing upstream that for your original sites.
-4. Add a site: Go to the sites menu, click the "New site" button, and follow the prompts to add the site domain names for reverse proxy.
-5. Test connectivity: Change your domain dns A or CNAME record to the OpenResty Manager server IP, visit your website to see if it can be opened.
-
+3. Add apps: Go to the app store menu and install apps such as WordPress with just one click.
+4. Add upstreams: Go to the upstream management menu and add upstream load balancing for installed applications such as WordPress.
+5. Add a site: Go to the sites menu, click the "New site" button, and follow the prompts to add the site domain names for reverse proxy.
+6. Test connectivity: Change your domain dns A or CNAME record to the OpenResty Manager server IP, visit your website to see if it can be opened.

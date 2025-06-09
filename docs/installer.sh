@@ -104,20 +104,20 @@ add_repository() {
             local v2=$(normalize_version "22")
             local v3=$(normalize_version "18")
             if [ "$NEW_OS_VERSION" -ge "$v2" ]; then
-                wget -O - https://openresty.org/package/pubkey.gpg | sudo gpg --dearmor -o /usr/share/keyrings/openresty.gpg
+                wget -O - https://openresty.org/package/pubkey.gpg | gpg --dearmor -o /usr/share/keyrings/openresty.gpg
                 if [ "$OS_ARCH" = "x86_64" ]; then
-                    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/openresty.gpg] http://openresty.org/package/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list > /dev/null
+                    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/openresty.gpg] http://openresty.org/package/ubuntu $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/openresty.list > /dev/null
                 else
-                    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/openresty.gpg] http://openresty.org/package/arm64/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list > /dev/null
+                    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/openresty.gpg] http://openresty.org/package/arm64/ubuntu $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/openresty.list > /dev/null
                 fi
             elif [ "$NEW_OS_VERSION" -lt "$v3" ]; then
                 abort "The operating system version is too low"
             else
-                wget -O - https://openresty.org/package/pubkey.gpg | sudo apt-key add -
+                wget -O - https://openresty.org/package/pubkey.gpg | apt-key add -
                 if [ "$OS_ARCH" = "x86_64" ]; then
-                    echo "deb http://openresty.org/package/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list
+                    echo "deb http://openresty.org/package/ubuntu $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/openresty.list
                 else
-                    echo "deb http://openresty.org/package/arm64/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openresty.list
+                    echo "deb http://openresty.org/package/arm64/ubuntu $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/openresty.list
                 fi
             fi
             apt-get update
@@ -125,15 +125,15 @@ add_repository() {
         debian)
             local v2=$(normalize_version "12")
             if [ "$NEW_OS_VERSION" -ge "$v2" ]; then
-                wget -O - https://openresty.org/package/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/openresty.gpg
+                wget -O - https://openresty.org/package/pubkey.gpg | gpg --dearmor -o /etc/apt/trusted.gpg.d/openresty.gpg
             else
-                wget -O - https://openresty.org/package/pubkey.gpg | sudo apt-key add -
+                wget -O - https://openresty.org/package/pubkey.gpg | apt-key add -
             fi
             codename=`grep -Po 'VERSION="[0-9]+ \(\K[^)]+' /etc/os-release`
             if [ "$OS_ARCH" = "x86_64" ]; then                
-                echo "deb http://openresty.org/package/debian $codename openresty" | sudo tee /etc/apt/sources.list.d/openresty.list
+                echo "deb http://openresty.org/package/debian $codename openresty" | tee /etc/apt/sources.list.d/openresty.list
             else
-                echo "deb http://openresty.org/package/arm64/debian $codename openresty" | sudo tee /etc/apt/sources.list.d/openresty.list
+                echo "deb http://openresty.org/package/arm64/debian $codename openresty" | tee /etc/apt/sources.list.d/openresty.list
             fi
             apt-get update
             ;;
@@ -199,6 +199,18 @@ install_openresty() {
     systemctl disable openresty > /dev/null 2>&1
 }
 
+install_docker() {
+    if [ ! $(command -v docker) ]; then
+        warning "Docker Engine not detected, we will automatically install it for you. The process is slow, please be patient ..."
+        curl https://om.uusec.com/install-docker.sh -o /tmp/install-docker.sh
+        sh /tmp/install-docker.sh
+        if [ $? -ne "0" ]; then
+            abort "Automatic installation of Docker Engine failed. Please manually install it before executing this script"
+        fi
+        systemctl enable docker && systemctl daemon-reload && systemctl restart docker
+    fi
+}
+
 install_openresty_manager() {
     if [ "$OS_ARCH" = "x86_64" ]; then                
         curl https://download.uusec.com/om.tgz -o /tmp/om.tgz
@@ -240,6 +252,8 @@ main() {
         warning "Install OpenResty ..."
         install_openresty
     fi
+
+    install_docker
 
     if [ ! -e "/opt/om" ]; then
         warning "Install OpenResty Manager ..."
