@@ -43,15 +43,15 @@
 ## :dart: 特色
 :green_circle: 提供了美观、强大且易于使用的web管理UI
 
- :purple_circle: 支持通过HTTP-01和DNS-01挑战申请免费SSL证书并自动续期
+:purple_circle: 支持通过HTTP-01和DNS-01挑战申请免费SSL证书并自动续期
 
- :yellow_circle: 无需了解OpenResty，即可轻松为您的网站创建反向代理
+:yellow_circle: 无需了解OpenResty，即可轻松为您的网站创建反向代理
 
- :orange_circle: 提供了多种强大安全功能，如访问控制、拒绝服务攻击防护等
+:orange_circle: 提供了多种强大安全功能，如访问控制、拒绝服务攻击防护等
 
- :red_circle: 简化服务器管理，为用户界面友好的终端和文件管理功能
+:red_circle: 简化服务器管理，为用户界面友好的终端和文件管理功能
 
- :large_blue_circle: 支持基于docker compose的应用商店功能，大大降低建站和容器管理的难度
+:large_blue_circle: 支持基于docker compose的应用商店功能，大大降低建站和容器管理的难度
 
 
 

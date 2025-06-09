@@ -51,18 +51,13 @@ The most simple, powerful and beautiful host management panel, an open source al
 ## :dart: Features
 :green_circle: Provide a beautiful, powerful, and easy-to-use web management UI
 
- :purple_circle: Free SSL support both for HTTP-01 and DNS-01 challenge or provide your own SSL certificates
+:purple_circle: Free SSL support both for HTTP-01 and DNS-01 challenge or provide your own SSL certificates
 
- :yellow_circle: Easily create reverse proxy for your websites without knowing anything about OpenResty
+:yellow_circle: Easily create reverse proxy for your websites without knowing anything about OpenResty
 
-<h3 align="center">
-  <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager_cn.png" alt="Dashboard" width="700px">
-  <br>
-</h3>
+:red_circle: Simplify host management, include UI frendly terminal and file manager for users
 
- :red_circle: Simplify host management, include UI frendly terminal and file manager for users
-
- :large_blue_circle: Support application store, greatly reducing the difficulty of website building and container management
+:large_blue_circle: Support application store, greatly reducing the difficulty of website building and container management
 
 
 
