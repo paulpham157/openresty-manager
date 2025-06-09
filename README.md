@@ -38,7 +38,12 @@
 The most simple, powerful and beautiful host management panel, an open source alternative to OpenResty Edge, allows you to easily secure reverse proxy websites running at home or on the Internet, including access control, denial of service attack protection, automatic application and renewal of free SSL certificates, without having to know too much about OpenResty or Let's Encrypt. And it supports host management, including easy-to-use web terminals and file management, as well as Docker Composer based application store, greatly reducing the difficulty of website building and container management.
 
 <h3 align="center">
-  <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager.png" alt="OpenResty Manager" width="700px">
+  <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager.png" alt="Dashboard" width="700px">
+  <br>
+</h3>
+
+<h3 align="center">
+  <img src="https://github.com/Safe3/openresty-manager/blob/main/docs/appstore.png" alt="Appstore" width="700px">
   <br>
 </h3>
 
@@ -50,7 +55,10 @@ The most simple, powerful and beautiful host management panel, an open source al
 
  :yellow_circle: Easily create reverse proxy for your websites without knowing anything about OpenResty
 
- :orange_circle: Provide some powerful security function, such as Access Control, HTTP Flood Protection, etc
+<h3 align="center">
+  <img src="https://github.com/Safe3/openresty-manager/blob/main/openresty-manager_cn.png" alt="Dashboard" width="700px">
+  <br>
+</h3>
 
  :red_circle: Simplify host management, include UI frendly terminal and file manager for users
 
