@@ -43,10 +43,6 @@
 
 
 ## :dart: 特色
-<h3 align="center">
-  <img src="https://github.com/Safe3/openresty-manager/blob/main/appstore.png" alt="Appstore" width="700px">
-  <br>
-</h3>
 
 :purple_circle: 支持通过HTTP-01和DNS-01挑战申请免费SSL证书并自动续期
 
