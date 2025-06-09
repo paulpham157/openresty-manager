@@ -52,13 +52,7 @@ check_ports() {
 
 install_openresty_manager() {
     mkdir -p /etc/docker
-    tee /etc/docker/daemon.json <<EOF
-{
-    "registry-mirrors": [
-        "https://docker.1ms.run"
-    ]
-}
-EOF
+    echo '{"registry-mirrors":["https://docker.1ms.run"]}' > /etc/docker/daemon.json
     curl https://om.uusec.com/docker_cn.tgz -o /tmp/docker.tgz
     mkdir -p /opt && tar -zxf /tmp/docker.tgz -C /opt/
     if [ $? -ne "0" ]; then
