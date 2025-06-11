@@ -52,7 +52,7 @@
 
 :red_circle: 简化服务器管理，为用户界面友好的终端和文件管理功能
 
-:large_blue_circle: 支持基于docker compose的应用商店功能，大大降低建站和容器管理的难度
+:large_blue_circle: 支持基于容器的应用商店功能，大大降低建站和容器管理的难度
 
 
 
